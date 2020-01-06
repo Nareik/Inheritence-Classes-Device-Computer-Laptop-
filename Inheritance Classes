@@ -41,7 +41,7 @@ namespace ClassesAssessmentDeviceComputerLaptop
 
         public class Laptop : Computer
         {
-            public bool laptop360;
+            public bool laptop360;//A boolean to show if the laptop can turn 360degrees
             public void SetLaptop()
             {
                 DevAtt1 = true;
