@@ -1,0 +1,52 @@
+using System;
+
+namespace ClassesAssessmentDeviceComputerLaptop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Device D1 = new Device();
+            D1.DevAtt3 = "Dave's Device";
+            D1.GetDevInfo("111.234.223");
+
+        }
+
+        public class Device
+        {
+            public bool DevAtt1; //This could be if it is mobile or not
+            private string DevAtt2; //This could be the IP or MAC address etc
+            public string DevAtt3; //This could be the name of the device
+            public void GetDevInfo(string IPOrMAC)
+            {
+
+                DevAtt2 = IPOrMAC;
+
+                Console.WriteLine("IP/MAC: {0}", DevAtt2);
+                Console.WriteLine("Name of Device: {0}", DevAtt3);
+            }
+
+        }
+
+        public class Computer : Device
+        {
+            public string CompAtt1; //This could be the computer type
+
+            public void GetType(string CompType)
+            {
+                CompAtt1 = CompType;
+                Console.WriteLine("Type of computer: {0}", CompAtt1);
+            }
+        }
+
+        public class Laptop : Computer
+        {
+            public bool laptop360;
+            public void SetLaptop()
+            {
+                DevAtt1 = true;
+            }
+        }
+
+    }
+}
